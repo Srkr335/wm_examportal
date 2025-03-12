@@ -42,11 +42,15 @@ class BatchController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([  
-
-
-
-         ]); 
+        $request->validate([
+            'batch_name'   => 'required|string|max:255',
+            'course_name'  => 'required|exists:courses,id',
+            'start_date'   => 'required|date|after_or_equal:today',
+            'end_date'     => 'required|date|after:start_date',
+            'centre_name'  => 'required|exists:centres,id',
+            'status'       => 'required|in:active,inactive',
+        ]);
+    
 
         $batch = new Batch();
         $batch->name = $request->batch_name;

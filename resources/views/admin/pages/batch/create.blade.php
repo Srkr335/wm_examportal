@@ -43,7 +43,8 @@
                                             <label class="form-control-label">Batch Name</label>
                                             <input type="text" class="form-control" placeholder="Enter your Batch Name"
                                                 name="batch_name" id="batch_name">
-                                        </div>
+                                                <small class="text-warning">{{ $errors->first('batch_name') }}</small>
+                                            </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
@@ -55,6 +56,8 @@
                                                 <option value="{{$course->id}}">{{$course->title}}</option>
                                                 @endforeach
                                             </select>
+                                            <small class="text-warning">{{ $errors->first('course_name') }}</small>
+
                                         </div>
                                     </div>
                                     <!-- <div class="col-lg-4">
@@ -74,6 +77,8 @@
                                             <label class="form-control-label">Start Date</label>
                                             <input type="date" class="form-control" placeholder="Enter your Batch Name"
                                                 name="start_date" id="start_date">
+                                                <smell class="text-warning">{{ $errors->first('start_date') }}</smell>
+
                                         </div>
                                     </div>
                                     <div class="col-lg-3">
@@ -81,6 +86,8 @@
                                             <label class="form-control-label">End Date</label>
                                             <input type="date" class="form-control" placeholder="Enter your Batch Name"
                                                 name="end_date" id="end_date">
+                                                <smell class="text-warning">{{ $errors->first('end_date') }}</smell>
+
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -93,6 +100,8 @@
                                                 <option value="{{$centre->id}}">{{$centre->name}}</option>
                                                 @endforeach
                                             </select>
+                                            <smell class="text-warning">{{ $errors->first('centre_name') }}</smell>
+
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -104,6 +113,8 @@
                                                 <option value="1">Active</option>
                                                 <option value="0">Inactive</option>
                                             </select>
+                                            <smell class="text-warning">{{ $errors->first('status') }}</smell>
+
                                         </div>
                                     </div>
 
