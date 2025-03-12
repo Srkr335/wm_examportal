@@ -42,6 +42,12 @@ class BatchController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([  
+
+
+
+         ]); 
+
         $batch = new Batch();
         $batch->name = $request->batch_name;
         $batch->course_id  = $request->course_name;

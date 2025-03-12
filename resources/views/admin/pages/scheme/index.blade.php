@@ -52,11 +52,13 @@
                                                     </td>
                                                     <td>
                                                         <a href="{{route('scheme.edit', $scheme->id)}}"
-                                                            class="btn btn-info text-white">
-                                                            <span class="glyphicon glyphicon-edit"></span> Edit
+                                                            class="btn btn-primary text-white btn-sm">
+                                                            <span class="fas fa-edit me-1"></span> Edit
                                                         </a>
-                                                        <button type="button" class="btn btn-danger text-white"
-                                                            onclick="confirmDelete({{$scheme->id}})">Delete</button>
+                                                        <button type="button" class="btn btn-danger btn-sm" onclick="confirmDelete({{ $scheme->id }})">
+                                                            <i class="fas fa-trash-alt me-1"></i> Delete
+                                                        </button>
+                                                        
                                                     </td>
                                                 </tr>
                                                 @endforeach

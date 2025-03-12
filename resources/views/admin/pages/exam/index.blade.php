@@ -61,13 +61,14 @@
                                                                 @endif
                                                             </td>
                                                             <td>
-                                                                <a href="{{ route('exam.edit', $exam->id) }}"
-                                                                    class="btn btn-info text-white">
-                                                                    <span class="glyphicon glyphicon-edit"></span> Edit
+                                                                <a href="{{ route('exam.edit', $exam->id) }}" class="btn btn-primary text-white">
+                                                                    <i class="fas fa-edit me-1"></i> Edit
                                                                 </a>
-                                                                <button type="button" class="btn btn-danger text-white"
-                                                                onclick="confirmDelete({{ $exam->id }})">Delete</button>
+                                                                <button type="button" class="btn btn-danger text-white" onclick="confirmDelete({{ $exam->id }})">
+                                                                    <i class="fas fa-trash-alt me-1"></i> Delete
+                                                                </button>
                                                             </td>
+   
                                                         </tr>
                                                     @endforeach
                                                     @if ($exams->count() == 0)

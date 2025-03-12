@@ -52,21 +52,18 @@
                                                                 @endif
                                                             </td>
                                                             <td>
-                                                                <!-- Edit Button -->
-                                                                <a href="{{ route('admin.category.edit', $category->id) }}" class="btn btn-info text-white">
-                                                                    <span class="glyphicon glyphicon-edit"></span> Edit
-                                                                </a>
-                                                            
-                                                                <!-- Delete Button -->
-                                                                <form action="{{ route('admin.category.destroy', $category->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this category?');">
-                                                                    @csrf
-                                                                    @method('DELETE')
-                                                                    <button type="submit" class="btn btn-danger">
-                                                                        <span class="glyphicon glyphicon-trash"></span> Delete
-                                                                    </button>
-                                                                </form>
+<a href="{{ route('admin.category.edit', $category->id) }}" class="btn btn-primary text-white">
+    <i class="fas fa-edit me-1"></i> Edit
+</a>
+<form action="{{ route('admin.category.destroy', $category->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this category?');">
+    @csrf
+    @method('DELETE')
+    <button type="submit" class="btn btn-danger">
+        <i class="fas fa-trash-alt me-1"></i> Delete
+    </button>
+</form>
+
                                                             </td>
-                                                            
                                                         </tr>
                                                     @endforeach
                                                 </tbody>

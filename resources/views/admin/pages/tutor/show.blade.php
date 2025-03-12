@@ -210,7 +210,7 @@
                                 onsubmit="return confirm('Are you sure you want to temporary deactivate this tutor?');">
                               @csrf
                               @method('DELETE')
-                              <button type="submit" class="btn btn-warning ms-2">Deactivate Profile</button>
+                              <button type="submit" class="btn btn-danger ms-2">Deactivate Profile</button>
                           </form>
                         </div>
                     </div>

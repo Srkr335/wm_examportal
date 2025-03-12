@@ -70,15 +70,14 @@
                 list.classList.add('hidden')
             })
         </script> --}}
-
-         <script type="text/javascript">
-
+        <script type="text/javascript">
             $(function() {
                 var table = $('.dataTable').DataTable({
                     processing: true,
                     serverSide: true,
                     ajax: "{{ route('admin.course.get') }}",
-                    columns: [{
+                    columns: [
+                        {
                             data: 'DT_RowIndex',
                             name: 'DT_RowIndex',
                             orderable: false,
@@ -88,7 +87,11 @@
                             data: 'image',
                             name: 'image',
                             orderable: false,
-                            searchable: false
+                            searchable: false,
+                            render: function(data, type, row) {
+                                var imageUrl = data ? data :'/images/category/default.png'; // Replace with your default image path
+                                return `<img src="${imageUrl}" alt="Course Image" width="50" height="50">`;
+                            }
                         },
                         {
                             data: 'title',
@@ -120,8 +123,8 @@
                         },
                     ]
                 });
-
             });
+        
             $(document).on('click', '.delete-course', function(e) {
     e.preventDefault();
     var courseId = $(this).data('id');

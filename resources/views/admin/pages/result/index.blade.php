@@ -46,15 +46,14 @@
                                                             <td>{{$exam->centre->name}}</td>
                                                             <td>
                                                                 <div class="d-flex align-items-center gap-2">
-                                                                    <a href="{{ route('exam_result.show', $exam->id) }}" class="btn btn-outline-info btn-sm rounded-pill shadow-sm">
+                                                                    <a href="{{ route('exam_result.show', $exam->id) }}" class="btn btn-outline-primary btn-sm   shadow-sm">
                                                                         <i class="fas fa-eye"></i> View
                                                                     </a>
-                                                                    <button type="button" class="btn btn-outline-danger btn-sm rounded-pill shadow-sm" onclick="confirmDelete({{ $exam->id }})">
+                                                                    <button type="button" class="btn btn-danger text-white btn-sm   "  onclick="confirmDelete({{ $exam->id }})">
                                                                         <i class="fas fa-trash-alt"></i> Delete
                                                                     </button>
                                                                 </div>
                                                             </td>
-                                                            
                                                     @endforeach
                                                     @if ($exams->count() == 0)
                                                         <tr></tr>

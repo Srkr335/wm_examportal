@@ -51,10 +51,10 @@
                                                                 @endif
                                                                 <td>
                                                                     <div class="d-flex align-items-center gap-2">
-                                                                        <a href="{{ route('modules.edit', $module->id) }}" class="btn btn-outline-primary btn-sm rounded-pill shadow-sm">
+                                                                        <a href="{{ route('modules.edit', $module->id) }}" class="btn btn-primary text-white">
                                                                             <i class="fas fa-edit"></i> Edit
                                                                         </a>
-                                                                        <button type="button" class="btn btn-outline-danger btn-sm rounded-pill shadow-sm" onclick="confirmDelete({{ $module->id }})">
+                                                                        <button type="button" class="btn btn-danger text-white" onclick="confirmDelete({{ $module->id }})">
                                                                             <i class="fas fa-trash-alt"></i> Delete
                                                                         </button>
                                                                     </div>

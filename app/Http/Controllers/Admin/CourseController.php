@@ -70,9 +70,11 @@ class CourseController extends Controller
                 })
                 ->addColumn('action', function ($row) {
                     return '
-                        <a href="' . route("admin.course.study-materials", $row->id) . '" class="btn btn-info btn-sm">Study Materials</a>
-                        <a href="' . route("admin.course.edit", $row->id) . '" class="btn btn-primary btn-sm">Edit</a>
-                        <button class="btn btn-danger btn-sm delete-course" data-id="' . $row->id . '">Delete</button>
+<a href="' . route("admin.course.study-materials", $row->id) . '" class="btn btn-info btn-sm">
+    <i class="fas fa-book me-1"></i> Study Materials
+</a>
+<a href="' . route("admin.course.edit", $row->id) . '" class="btn btn-primary btn-sm"><i class="fas fa-edit me-1"></i> Edit</a>
+<button class="btn btn-danger btn-sm delete-course" data-id="' . $row->id . '"> <i class="fas fa-trash-alt me-1"></i> Delete</button>
                     ';
                 })
                 ->rawColumns(['image', 'level', 'category', 'status', 'action'])

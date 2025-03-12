@@ -113,9 +113,9 @@ class PaymentController extends Controller
                 })
                 ->addColumn('action', function ($row) {
                     return '<div class="d-flex">
-                                <a href="' . route("admin.payment.edit", $row->id) . '" class="btn btn-primary btn-sm mx-1">Edit</a> 
-`                                <button data-url="' . route("admin.payment.delete", $row->id) . '" class="delete-payment btn btn-danger btn-sm mx-1">Delete</button>
-                            </div>';
+    <a href="' . route("admin.payment.edit", $row->id) . '" class="btn btn-primary btn-sm mx-1"><i class="fas fa-edit me-1"></i> Edit </a>
+    <button data-url="' . route("admin.payment.delete", $row->id) . '" class="delete-payment btn btn-danger btn-sm mx-1"><i class="fas fa-trash-alt me-1"></i> Delete</button>
+</div>';
                 })
                 
                 ->rawColumns(['student', 'course', 'status', 'action'])

@@ -98,7 +98,7 @@ class ResultController extends Controller
         //
     }
 
-    /**
+    /**x
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request

@@ -54,10 +54,10 @@
                                                             </td>
                                                             <td>
                                                                 <div class="d-flex align-items-center gap-2">
-                                                                    <a href="{{ route('admin.quiz.edit', $quiz->id) }}" class="btn btn-outline-info rounded-pill shadow-sm">
+                                                                    <a href="{{ route('admin.quiz.edit', $quiz->id) }}"  class="btn btn-primary btn-sm mx-1">
                                                                         <i class="fas fa-edit"></i> Edit
                                                                     </a>
-                                                                    <a href="{{ route('admin.quiz.destroy', $quiz->id) }}" class="btn btn-outline-danger rounded-pill shadow-sm">
+                                                                    <a href="{{ route('admin.quiz.destroy', $quiz->id) }}" class="btn btn-danger btn-sm delete-quiz mx-1">
                                                                         <i class="fas fa-trash-alt"></i> Delete
                                                                     </a>
                                                                 </div>
